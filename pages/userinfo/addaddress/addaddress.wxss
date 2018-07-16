@@ -1,0 +1,31 @@
+.address{
+  background: whitesmoke;
+  height: 1200rpx;
+}
+.item{
+  display: flex;
+  flex-direction: row;
+  height: 80rpx;
+  width: 100%;
+  margin-top:1rpx; 
+  padding-left: 40rpx;
+  padding-top: 40rpx; 
+  background: white;
+}
+.name-user{
+  display: flex;
+  flex-direction: row;
+  width: 35%
+}
+.add-address{
+  position: fixed;
+  bottom: 0;
+  background: violet;
+  height: 100rpx;
+  width: 100%
+}
+.add-bar{
+  padding-top: 20rpx;
+  text-align: center;
+  color: white
+}

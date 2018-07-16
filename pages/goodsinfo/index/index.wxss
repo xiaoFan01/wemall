@@ -1,0 +1,171 @@
+/* 居中 */
+
+.center {
+  text-align: center;
+}
+
+.all {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.barcss {
+  background-color: white;
+  width: 100%;
+  font-size: 30rpx;
+  z-index: 999;
+  height: 50rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  position: fixed;
+}
+
+.barone {
+  padding-left: 95rpx;
+  padding-right: 95rpx;
+  color: #d4d4d4;
+}
+
+.red {
+  color: #ff6347;
+  padding-left: 95rpx;
+  padding-right: 95rpx;
+}
+
+/* 轮播图 */
+
+.swipercss {
+  height: 700rpx;
+  width: 100%;
+}
+
+.swiper2 {
+  height: 100%;
+  width: 100%;
+}
+
+/* 显示商品名称下面的红色小字 */
+
+.smallredfont {
+  color: red;
+  font-size: 12px;
+}
+
+/* 显示价格的字体为红色 */
+
+.price {
+  color: red;
+}
+
+/* 降价提醒 */
+
+.notice {
+  font-size: 9px;
+  float: right;
+}
+
+/* 分割线 */
+
+.line {
+  background-color: #f8f8ff;
+  height: 12px;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+/* 分割线下字体 */
+
+.font1 {
+  font-size: 18px;
+}
+
+/* 满减图标 */
+
+.icon1 {
+  height: 22px;
+  width: 80px;
+}
+
+/* 券数量 */
+
+.number {
+  float: right;
+  font-size: 14px;
+  color: #cdc5bf;
+}
+
+/* 下拉提示 */
+
+.downlisttip {
+  float: right;
+  margin-top: 4px;
+  height: 24px;
+  width: 24px;
+}
+
+/* 促销下的按钮样式 */
+
+.button1 {
+  color: red;
+  font-size: 12px;
+  border-style: solid;
+  border-color: red;
+  border-width: 1px;
+  display: inline;
+  padding: 1px;
+  margin: 4px;
+}
+
+/* 促销下字体 */
+
+.text1 {
+  font-size: 13px;
+}
+
+/* 参数分割线 */
+
+.line2 {
+  height: 12px;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+/* 参数样式 */
+
+.data {
+  font-size: 14px;
+}
+
+/* 送至 */
+
+.to {
+  font-size: 12px;
+}
+
+/* 加入购物车 */
+
+.cart {
+  font-size: 30rpx;
+  color: white;
+  background-color: #eeb422;
+  border-style: solid;
+  border: #eeb422, 1px;
+  width: 50%;
+  margin: 0px;
+  float: left;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+
+.buy {
+  font-size: 30rpx;
+  color: white;
+  background-color: red;
+  border-style: solid;
+  border: red, 1px;
+  width: 50%;
+  float: right;
+  margin: 0px;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}

@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/goodsinfo/index/index",
+    "pages/goodsinfo/judge/judge",
+    "pages/goodsinfo/more/more",
+    "pages/cart/cart",
+    "pages/userinfo/index/index",
+    "pages/userinfo/address/address",
+    "pages/userinfo/addaddress/addaddress"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  }
+}

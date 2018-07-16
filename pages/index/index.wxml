@@ -1,0 +1,40 @@
+<view class='index'>
+  <view class='search'>
+    <view class='search-input'>
+      <input class='search-input-in'></input>
+    </view>
+    <view class='search-btn'>搜索</view>
+  </view>
+
+  <view class='slideshow'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+      <block wx:for="{{imgUrls}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item}}" class="slide-images" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view scroll-y='true' class='advertisement'>
+    <view class='advertisement-title'>
+      - 私人装备 -
+    </view>
+    <view class='advertisement-img'>
+      <image src='/static/img/01.jpg' class='img-size'></image>
+    </view>
+    <view class='goods-row'>
+      <view class='goods' bindtap='togoodsinfo'>
+        <view class='goods-img'><image src='/static/img/iPad.jpg' class='goods-img-size'></image></view>
+        <text class='goods-name'>APPLE苹果iPad2018新款平板电脑air2更新版9.8英寸 金色WLAN版</text>
+        <view class='goods-price'>¥ 2088</view>
+      </view>
+      <view class='goods2'>
+        <view class='goods-img'><image src='/static/img/02.jpg' class='goods-img-size'></image></view>
+        <view class='goods-name'>惠科（HKC）C340 34英寸100Hz刷新准4K高分21:9曲面电竞吃鸡游戏组装主机台</view>
+        <view class='goods-price'>¥ 2299</view>
+      </view>
+    </view>
+  </view>
+</view>
+<include src='/static/wxml/footer.wxml' />

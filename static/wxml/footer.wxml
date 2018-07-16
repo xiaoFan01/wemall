@@ -1,0 +1,38 @@
+<view class='bar'>
+    <view class='icon-div' hidden='{{flag1}}' bindtap='select0'>
+      <view class='icon-position'>
+        <image src='/static/img/footer01.png' class='icon-size'></image>
+      </view>
+      <view class='icon-name'>小店铺</view>
+    </view>
+    <view class='icon-div' hidden='{{!flag1}}'>
+      <view class='icon-position'>
+        <image src='/static/img/footer001.png' class='icon-size'></image>
+      </view>
+      <view class='icon-name-select'>小店铺</view>
+    </view>
+    <view class='icon-div' hidden='{{flag2}}' bindtap='select1'>
+      <view class='icon-position'>
+        <image src='/static/img/footer03.png' class='icon-size'></image>
+      </view>
+      <view class='icon-name'>购物车</view>
+    </view>
+    <view class='icon-div' hidden='{{!flag2}}'>
+      <view class='icon-position'>
+        <image src='/static/img/footer003.png' class='icon-size'></image>
+      </view>
+      <view class='icon-name-select'>购物车</view>
+    </view>
+    <view class='icon-div' hidden='{{flag3}}' bindtap='select2'>
+      <view class='icon-position'>
+        <image src='/static/img/footer04.png' class='icon-size'></image>
+      </view>
+      <view class='icon-name'>个人中心</view>
+    </view>
+    <view class='icon-div' hidden='{{!flag3}}'>
+      <view class='icon-position'>
+        <image src='/static/img/footer004.png' class='icon-size'></image>
+      </view>
+      <view class='icon-name-select'>个人中心</view>
+    </view>
+  </view>

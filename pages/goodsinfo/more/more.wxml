@@ -1,0 +1,13 @@
+<!-- 固定导航栏 -->
+<view class='barcss'>
+  <text class='barone' bindtap='jumptogoods'>商品</text>
+  <text class='barone' bindtap='jumptojudge'>评价</text>
+  <text class='red'>详情</text>
+</view>
+<view class='all'>
+  <view class='wideline1'></view>
+  <image src='../static/image/iPad0.jpg' class='image'></image>
+  <image src='../static/image/iPad1.jpeg' class='image'></image>
+  <image src='../static/image/iPad2.jpeg' class='image'></image>
+  <image src='../static/image/iPad3.jpeg' class='image'></image>
+</view>

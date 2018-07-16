@@ -1,0 +1,29 @@
+<view class='address'>
+  <view class='item'>
+    <view class='name-user'>收件人：</view>
+    <view>
+      <input placeholder='姓名'></input>
+    </view>
+  </view>
+  <view class='item'>
+    <view class='name-user'>手机号：</view>
+    <view>
+      <input placeholder='手机或电话号码'></input>
+    </view>
+  </view>
+  <view class='item'>
+    <view class='name-user'>收货地址：</view>
+    <view>
+      <input placeholder='收货地址'></input>
+    </view>
+  </view>
+  <view class='item'>
+    <view class='name-user'>详细地址：</view>
+    <view>
+      <input placeholder='街道地址'></input>
+    </view>
+  </view>
+</view>
+<view class='add-address'>
+  <view class='add-bar'>确定</view>
+</view>

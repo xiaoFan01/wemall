@@ -1,0 +1,95 @@
+/* 导航栏 */
+.all {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.barcss {
+  background-color: white;
+  width: 100%;
+  font-size: 30rpx;
+  z-index: 999;
+  height: 50rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  position: fixed;
+}
+
+.barone {
+  padding-left: 95rpx;
+  padding-right: 95rpx;
+  color: #d4d4d4;
+}
+
+.red {
+  color: #ff6347;
+  padding-left: 95rpx;
+  padding-right: 95rpx;
+}
+
+.wideline1 {
+  height: 50rpx;
+  width: 100%;
+}
+
+.wideline {
+  height: 40rpx;
+  background-color: #f8f8ff;
+  width: 100%;
+}
+
+.line {
+  height: 5rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  background-color: #f8f8ff;
+}
+
+.commit {
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+/* 评价小红字 */
+
+.smallred {
+  font-size: 30rpx;
+  color: red;
+}
+
+/* 右侧统计 */
+
+.totle {
+  color: #d4d4d4;
+  font-size: 30rpx;
+  float: right;
+}
+
+/* 下侧统计 */
+
+.downtotle {
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  background-color: #eee0e5;
+  color: #8b8386;
+  font-size: 24rpx;
+  padding: 5rpx;
+}
+
+/* 会员名 */
+
+.username {
+  font-size: 24rpx;
+}
+
+.xing {
+  font-size: 24rpx;
+}
+
+.date {
+  float: right;
+  font-size: 24rpx;
+}
+
+.font {
+  font-size: 30rpx;
+}

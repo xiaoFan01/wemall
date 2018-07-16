@@ -1,0 +1,6 @@
+<view class='address'>
+添加地址
+</view>
+<view class='add-address'>
+  <view class='add-bar' bindtap='add'>+ 添加地址</view>
+</view>

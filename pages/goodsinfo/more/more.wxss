@@ -1,0 +1,33 @@
+.all {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+
+.barcss {
+  background-color: white;
+  width: 100%;
+  font-size: 30rpx;
+  z-index: 999;
+  height: 50rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  position: fixed;
+}
+.barone{
+  padding-left: 95rpx;
+  padding-right: 95rpx;
+  color: #d4d4d4;
+}
+.red{
+  color: #ff6347;
+  padding-left: 95rpx;
+  padding-right: 95rpx;
+}
+.wideline1 {
+  height: 50rpx;
+  width: 100%;
+}
+.image{
+  width: 100%;
+}

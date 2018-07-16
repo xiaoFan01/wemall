@@ -1,0 +1,31 @@
+<view class='userindex'>
+  <view class='userinfo'>
+    <view class='username'>
+      <text class='name-font'>情非首尔</text>
+    </view>
+    <view class='userimge'>
+      <view class='imge-position'>
+        <image src='/static/img/userimge.jpeg' class='userimge-size'></image>
+      </view>
+    </view>
+  </view>
+  <view class='order'>
+    <view class='mycart'>
+      <image src='/static/img/order.png' class='imge-size'></image>
+      <text space='ensp'> 我的订单</text>
+    </view>
+    <view class='order-more'>
+      <image src='/static/img/icon-more.png' class='imge-size'></image>
+    </view>
+  </view>
+  <view class='order' bindtap='toaddress'>
+    <view class='mycart'>
+      <image src='/static/img/address.png' class='imge-size'></image>
+      <text space='ensp'> 地址管理</text>
+    </view>
+    <view class='order-more'>
+      <image src='/static/img/icon-more.png' class='imge-size'></image>
+    </view>
+  </view>
+</view>
+<include src='/static/wxml/footer.wxml' />
