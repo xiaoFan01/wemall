@@ -11,6 +11,7 @@
   padding-left: 40rpx;
   padding-top: 40rpx; 
   background: white;
+  font-size: small
 }
 .name-user{
   display: flex;

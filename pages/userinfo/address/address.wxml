@@ -1,5 +1,20 @@
 <view class='address'>
-添加地址
+  <view wx:for="{{addr}}" wx:key="*this">
+    <view class='addr-msg'>
+      <view class='addr'>{{item.addr}}</view>
+      <view class='addr'>{{item.name}} {{item.phone}}</view>
+      <view class='opt'>
+        <view wx:if="{{item.isSelect}}">
+          <icon class='icon' data-index="{{index}}" bindtap='select' type="success" size="20" color="black" />
+        </view>
+        <view wx:elif="{{!item.isSelect}}">
+          <icon class='icon' data-index="{{index}}" bindtap='select' type="circle" size="20" color="black" />
+        </view>
+        <view class='font'>默认地址</view>
+        <button class='btn'>删除</button>
+      </view>
+    </view>
+  </view>
 </view>
 <view class='add-address'>
   <view class='add-bar' bindtap='add'>+ 添加地址</view>

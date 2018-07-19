@@ -1,2 +1,8 @@
 {
+	"setting": {
+		"newFeature": true
+	},
+	"appid": "wx76922aad15746294",
+	"projectname": "mall",
+	"condition": {}
 }

@@ -95,5 +95,10 @@ Page({
     wx.navigateTo({
       url: '/pages/userinfo/address/address',
     })
+  },
+  tomyorder(){
+    wx.navigateTo({
+      url: '/pages/order/order',
+    })
   }
 })

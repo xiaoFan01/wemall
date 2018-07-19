@@ -4,18 +4,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    addr:[{
-      addr: "陕西省西安市长安区",
-      name: "小明",
-      phone: "1234564789",
-      isSelect: true 
-    },
-      {
-        addr: "陕西省西安市长安区",
-        name: "张三",
-        phone: "9876543210",
-      isSelect: false 
-    }]
+    color1: "red",
+    color2: "black",
+    color3: "black",
+    color4: "black",
   },
 
   /**
@@ -73,24 +65,36 @@ Page({
   onShareAppMessage: function () {
     
   },
-  select(e){
-    var index = parseInt(e.target.dataset.index);
-    var i = 0;
-    console.log("index" + index);
-    this.data.addr[index].isSelect = !this.data.addr[index].isSelect;
-    console.log(this.data.addr[index].isSelect);
-    let addr = this.data.addr
-    for(i=0;i<this.data.addr.length;i++){
-      addr[i].isSelect = false
-    }
-    addr[index].isSelect = true;
+  select1: function () {
     this.setData({
-      addr
+      color1: "red",
+      color2: "black",
+      color3: "black",
+      color4: "black",
     })
   },
-  add: function(){
-    wx.navigateTo({
-      url: '/pages/userinfo/addaddress/addaddress',
+  select2: function () {
+    this.setData({
+      color1: "black",
+      color2: "red",
+      color3: "black",
+      color4: "black",
+    })
+  },
+  select3: function () {
+    this.setData({
+      color1: "bleak",
+      color2: "black",
+      color3: "red",
+      color4: "black",
+    })
+  },
+  select4: function () {
+    this.setData({
+      color1: "bleak",
+      color2: "black",
+      color3: "bleak",
+      color4: "red",
     })
   }
 })

@@ -20,7 +20,7 @@ Page({
         price: 2088,
         isSelect: false,
         // 数据设定
-        count: 2
+        count: 1
       },
       {
         id: 2,

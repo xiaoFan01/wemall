@@ -39,7 +39,7 @@ page{
   position: relative;
 }
 .title {
-  font-size: 38rpx;
+  font-size: small;
   margin-top: 40rpx;
 }
 .small_text {

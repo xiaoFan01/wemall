@@ -9,7 +9,7 @@
       </view>
     </view>
   </view>
-  <view class='order'>
+  <view class='order' bindtap='tomyorder'>
     <view class='mycart'>
       <image src='/static/img/order.png' class='imge-size'></image>
       <text space='ensp'> 我的订单</text>

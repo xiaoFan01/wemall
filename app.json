@@ -7,7 +7,8 @@
     "pages/cart/cart",
     "pages/userinfo/index/index",
     "pages/userinfo/address/address",
-    "pages/userinfo/addaddress/addaddress"
+    "pages/userinfo/addaddress/addaddress",
+    "pages/order/order"    
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",
