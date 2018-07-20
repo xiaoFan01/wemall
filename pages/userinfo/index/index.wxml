@@ -1,11 +1,12 @@
 <view class='userindex'>
   <view class='userinfo'>
     <view class='username'>
-      <text class='name-font'>情非首尔</text>
+      <view wx:if="{{!hasUserInfo && canIUse}}" class='msg-btn'><button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button></view>
+      <text class='name-font'>{{userInfo.nickName}}</text>
     </view>
     <view class='userimge'>
       <view class='imge-position'>
-        <image src='/static/img/userimge.jpeg' class='userimge-size'></image>
+        <image src='{{userInfo.avatarUrl}}' class='userimge-size'></image>
       </view>
     </view>
   </view>

@@ -35,7 +35,8 @@
 .userimge-size{
   height: 180rpx;
   width: 180rpx;
-  border-radius: 50%
+  border-radius: 50%;
+  border: 1rpx whitesmoke solid;
 }
 .order{
   display: flex;
@@ -66,5 +67,11 @@
   flex-direction: row;
   background: white
 }
-.imge-size1{
+.msg-btn{
+  width: 400rpx;
+  padding-top: 100rpx;
+  padding-left: 20rpx;
+}
+button::after{
+  border: none;
 }

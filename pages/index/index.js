@@ -18,17 +18,14 @@ Page({
     indicatorDots: true,
     autoplay: true,
     interval: 3000,
-    duration: 500
+    duration: 500,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      Height:app.globalData.windowHeight,
-      Width: app.globalData.windowWidth
-    })
+    
   },
 
   /**
