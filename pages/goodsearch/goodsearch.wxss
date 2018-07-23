@@ -1,0 +1,127 @@
+.search {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px;
+  height: 100rpx;
+  background: red;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.search-input {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+  padding-top: 20rpx;
+  width: 650rpx;
+}
+
+.search-input-in {
+  padding-left: 20rpx;
+  border-radius: 5px;
+  height: 60rpx;
+  color: black;
+  width: 100%;
+  background: #fff;
+}
+
+.search-btn {
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+  width: 100rpx;
+}
+
+.sort-out {
+  display: inline-flex;
+  position: fixed;
+  background-color: white;
+  /* flex-direction: row; */
+  text-align: center;
+  top: 100rpx;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.sort{
+  width: 33%;
+  text-align: center;
+}
+
+.sort-red {
+  width: 33%;
+  text-align: center;
+  color: red;
+  background-color: azure;
+}
+
+.advertisement {
+  height: 0rpx;
+  background: #fff;
+  position: relative;
+  top: 150rpx;
+}
+
+.goods-row {
+  display: flex;
+  flex-direction: row;
+  padding-top: 40rpx;
+  height: 400rpx;
+}
+
+.goods-img {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.goods-img-size {
+  height: 300rpx;
+  width: 100%;
+}
+
+.goods-name {
+  font-size: smaller;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline;
+}
+
+.goods-price {
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+  color: red;
+}
+
+.img {
+  position: left;
+  width: 90px;
+  height: 90px;
+  margin: 10px;
+}
+
+.good-out {
+  display: flex;
+  flex-direction: row;
+}
+
+.goodinfo {
+  font-size: small;
+  padding-top: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.goodinfo-border {
+  margin-top: 1px;
+}

@@ -39,8 +39,22 @@ page{
   position: relative;
 }
 .title {
+  width: 400rpx;
   font-size: small;
   margin-top: 40rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+ .del{
+  padding-top: 30rpx;
+  padding-left: 45rpx;
+  display: flex;
+  flex-direction: row
+} 
+.del-size{
+  height: 45rpx;
+  width: 40rpx
 }
 .small_text {
   font-size: 28rpx;

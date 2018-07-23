@@ -7,16 +7,16 @@ Page({
     flag1: false,
     flag2: true,
     flag3: false,
-    hidden: null,
+    hidden: false,
     hiddenEmpty: true,
     isAllSelect: false,
     totalMoney: 0,
-    // 商品详情介绍
+    //商品详情介绍
     carts: [
       {
         id: 1,
         pic: "/static/img/iPad.jpg",
-        name: "APPLE苹果iPad2018款",
+        name: "APPLE苹果iPad2018款平板电脑air2更新版9APPLE苹果iPad2018新款平板电脑",
         price: 2088,
         isSelect: false,
         // 数据设定
@@ -172,11 +172,29 @@ Page({
   },
   // 去结算
   toBuy() {
-    wx.showToast({
-      title: '去结算',
-      icon: 'success',
-      duration: 3000
-    });
+    var a=0;
+    for(var i=0;i<this.data.carts.length;i++){
+      if(this.data.carts[i].isSelect==true){
+        a++;
+      }
+    }
+    if(a==0){
+      wx.showToast({
+        title: '请选择',
+        icon: 'none',
+        duration: 3000
+      });
+    }
+    else{
+      // wx.showToast({
+      //   title: '去结算',
+      //   icon: 'success',
+      //   duration: 3000
+      // });
+      wx.navigateTo({
+        url: '/pages/order-confirm/order-confirm'
+      })
+    }
     this.setData({
       showDialog: !this.data.showDialog
     });
@@ -232,6 +250,33 @@ Page({
     }
     this.setData({
       totalMoney: this.data.totalMoney,
+    })
+  },
+  del(e){
+    var index = parseInt(e.target.dataset.index);
+    let carts = this.data.carts;
+    var a = 0;
+    carts[index]=null;
+    console.log(index);
+    this.setData({
+      carts
+    })
+    console.log(carts)
+    for (var i = 0; i < this.data.carts.length;i++){
+      if(carts[i]!=null){
+        a++;
+      }
+    }
+    if(a==0){
+      this.setData({
+        hidden: true,
+        hiddenEmpty: false,
+      })
+    }
+  },
+  toindex(){
+    wx.redirectTo({
+      url: '/pages/index/index',
     })
   }
 })

@@ -16,7 +16,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function () {
+  onLoad: function() {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -44,7 +44,7 @@ Page({
       })
     }
   },
-  getUserInfo: function (e) {
+  getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
@@ -56,41 +56,42 @@ Page({
       wx.setStorageSync('userInfo', e.detail.userInfo);
       console.log(e.detail.userInfo)
     } catch (e) {
+      console.log("缓存失败")
     }
   },
-  select0: function () {
+  select0: function() {
     this.setData({
-      flag1: true,
-      flag2: false,
-      flag3: false
-    }),
+        flag1: true,
+        flag2: false,
+        flag3: false
+      }),
       wx.redirectTo({
         url: '/pages/index/index',
       })
   },
-  select1: function () {
+  select1: function() {
     this.setData({
-      flag1: false,
-      flag2: true,
-      flag3: false
-    }),
+        flag1: false,
+        flag2: true,
+        flag3: false
+      }),
       wx.redirectTo({
         url: '/pages/cart/cart',
       })
   },
-  select2: function () {
+  select2: function() {
     this.setData({
       flag1: false,
       flag2: false,
       flag3: true
     })
   },
-  toaddress: function(){
+  toaddress: function() {
     wx.navigateTo({
       url: '/pages/userinfo/address/address',
     })
   },
-  tomyorder(){
+  tomyorder() {
     wx.navigateTo({
       url: '/pages/order/order',
     })

@@ -1,6 +1,6 @@
 <view class='index'>
   <view class='search'>
-    <view class='search-input'>
+    <view class='search-input' bindtap='onClick'>
       <input class='search-input-in'></input>
     </view>
     <view class='search-btn'>搜索</view>
@@ -23,18 +23,21 @@
     <view class='advertisement-img'>
       <image src='/static/img/01.jpg' class='img-size'></image>
     </view>
-    <view class='goods-row'>
-      <view class='goods' bindtap='togoodsinfo'>
-        <view class='goods-img'><image src='/static/img/iPad.jpg' class='goods-img-size'></image></view>
-        <text class='goods-name'>APPLE苹果iPad2018新款平板电脑air2更新版9.8英寸 金色WLAN版</text>
-        <view class='goods-price'>¥ 2088</view>
+    <view class='goods-row' wx:for="{{goods}}" wx:key="*this">
+      <view class='goods' data-index="{{index}}" bindtap='togoodsinfo'>
+        <view class='goods-img'><image src='{{item.img}}' class='goods-img-size'></image></view>
+        <text class='goods-name'>{{item.name}}</text>
+        <view class='goods-price'>¥ {{item.price}}</view>
       </view>
-      <view class='goods2'>
-        <view class='goods-img'><image src='/static/img/02.jpg' class='goods-img-size'></image></view>
-        <view class='goods-name'>惠科（HKC）C340 34英寸100Hz刷新准4K高分21:9曲面电竞吃鸡游戏组装主机台</view>
-        <view class='goods-price'>¥ 2299</view>
+    </view>
+    <view class='goods-row' wx:for="{{goods1}}" wx:key="*this">
+      <view data-index="{{index}}" class='goods2' bindtap='togoodsinfo1'>
+        <view class='goods-img'><image src='{{item.img}}' class='goods-img-size'></image></view>
+        <view class='goods-name'>{{item.name}}</view>
+        <view class='goods-price'>¥ {{item.price}}</view>
       </view>
     </view>
   </view>
+  <view class='a'>.</view>
 </view>
 <include src='/static/wxml/footer.wxml' />

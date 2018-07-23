@@ -1,0 +1,129 @@
+.bgc{
+  background: whitesmoke;
+  height: 1300rpx
+}
+.addr{
+  display: flex;
+  flex-direction: row;
+  height: 120rpx;
+  width: 100%;
+  background: yellow
+}
+.addr-icon{
+  height: 100%;
+  width: 10%
+}
+.icon-size{
+  padding-top: 30rpx;
+  padding-left: 20rpx;
+  height: 50rpx;
+  width: 45rpx
+}
+.addr-msg{
+  padding-top: 18rpx;
+  padding-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+  font-size: x-small
+}
+.addr-no{
+  padding-top: 30rpx;
+  padding-left: 10%;
+}
+.order{
+  font-size: small;
+  margin-top: 30rpx;
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+  height: 330rpx;
+  background: white;
+}
+.goods{
+  display: flex;
+  flex-direction: row;
+  padding-top: 15rpx;
+  height: 200rpx;
+  width: 100%;
+  border-bottom: 1rpx whitesmoke solid;
+}
+.photo{
+  height: 100%;
+  width: 30%
+}
+.photo-size{
+  height: 90%;
+  width: 90%
+}
+.goods-name{
+  width: 50%;
+  height: 80rpx;
+  padding-top: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.price-count{
+  padding-left: 10rpx;
+  padding-top: 40rpx;
+  width: 20%
+}
+.send{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10rpx;
+  border-bottom: 1rpx whitesmoke solid;
+}
+.subtotal{
+  padding-top: 10rpx;
+  padding-left: 45%;
+  display: flex;
+  flex-direction: row
+}
+.send-price{
+  padding-left: 75%
+}
+ .bottom_line {
+  width: 100%;
+  height: 2rpx;
+  background: lightgray;
+} 
+.bottom_total {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  bottom: 0rpx;
+  width: 100%;
+  height: 110rpx;
+  line-height: 110rpx;
+  background: white;
+  /* margin-top: 300rpx; */
+  border-top: 1rpx solid #ccc;
+}
+.button-red {
+  background-color: #f0145a; 
+  position: fixed;
+  right: 0;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 30rpx;
+  border-radius: 0rpx;
+  width: 30%;
+  height: 110rpx;
+  line-height: 110rpx;
+  /* border: 1rpx solid #ccc; */
+}
+.price {
+  color: red;
+  position: relative;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 20rpx
+}

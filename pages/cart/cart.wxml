@@ -2,27 +2,33 @@
   <scroll-view class="scroll" scroll-y="true">
     <view class="separate"></view>
     <view wx:for="{{carts}}" wx:key="*this">
-      <view class="cart_container">
-        <view wx:if="{{!item.isSelect}}">
-          <icon class="item-select" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" type="circle" size="20"></icon>
-        </view>
-        <view wx:elif="{{item.isSelect}}">
-          <icon class="item-select" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" type="success" color="#f0145a" size="20"></icon>
-        </view>
-
-        <image class="item-image" src="{{item.pic}}"></image>
-        <import src="../template/template.wxml" />
-        <view class="column">
-          <text class="title">{{item.name}}</text>
-          <view class="row">
-            <text class="sku-price">￥{{item.price * item.count}}</text>
-            <view class="sku">
-              <template is="quantity" data="{{ ...item,index:index}}" />
-            </view>
+      <view wx:if="{{item.id}}">
+        <view class="cart_container">
+          <view wx:if="{{!item.isSelect}}">
+            <icon class="item-select" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" type="circle" size="20"></icon>
+          </view>
+          <view wx:elif="{{item.isSelect}}">
+            <icon class="item-select" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" type="success" color="#f0145a" size="20"></icon>
           </view>
 
+          <image class="item-image" src="{{item.pic}}"></image>
+          <import src="../template/template.wxml" />
+          <view class="column">
+            <text class="title">{{item.name}}</text>
+            <view class="row">
+              <text class="sku-price">￥{{item.price * item.count}}</text>
+              <view class='del'>
+                <image data-index="{{index}}" class='del-size' src='/static/img/del.png' bindtap='del'></image>
+              </view>
+              <view class="sku">
+                <template is="quantity" data="{{ ...item,index:index}}" />
+              </view>
+            </view>
+
+          </view>
         </view>
       </view>
+
       <view class="separate"></view>
     </view>
   </scroll-view>
@@ -52,8 +58,8 @@
     <view class="cart"></view>
     <text class='empty-text'>购物车空空如也</text>
     <p></p>
-    <a href="//m.vip.com" class="button button-primary" mars_sead="cart_empty_home_btn">
-      去抢购
+    <a class="button button-primary" mars_sead="cart_empty_home_btn">
+      <view bindtap='toindex'>去抢购</view>
     </a>
   </view>
 </view>

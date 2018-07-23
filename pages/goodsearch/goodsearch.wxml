@@ -1,0 +1,37 @@
+<!--搜索栏  -->
+<view class='index'>
+  <view class='search'>
+
+    <view class='search-input'>
+      <input class='search-input-in'></input>
+    </view>
+
+    <view class='search-btn' bindtap='onsearch'>搜索</view>
+
+  </view>
+</view>
+<view hidden='{{hidden}}'>
+  <!--选项栏  -->
+  <view class="sort-out">
+    <view class="sort" hidden='{{h1}}' bindtap='onselect1'>综合</view>
+    <view class="sort-red" hidden='{{!h1}}'>综合</view>
+
+    <view class="sort" hidden='{{h2}}' bindtap='onselect2'>销量</view>
+    <view class="sort-red" hidden='{{!h2}}'>销量</view>
+
+    <view class="sort" hidden='{{h3}}' bindtap='onselect3'>价格</view>
+    <view class="sort-red" hidden='{{!h3}}'>价格</view>
+  </view>
+  <!--商品目录 -->
+  <view scroll-y='true' class='advertisement'>
+    <view wx:for="{{goods}}" wx:key="*this" data-index="{{index}}" class='good-out' bindtap='togoodsinfo'>
+      <view>
+        <image src='{{item.img}}' class='img'></image>
+      </view>
+      <view class='goodinfo-border'>
+        <text class='goodinfo'>{{item.name}}</text>
+        <view class='goods-price'>¥ {{item.price}}</view>
+      </view>
+    </view>
+  </view>
+</view>
