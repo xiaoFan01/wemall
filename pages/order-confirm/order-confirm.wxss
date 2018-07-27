@@ -58,7 +58,7 @@
 }
 .goods-name{
   width: 50%;
-  height: 80rpx;
+  height: 35px;
   padding-top: 30rpx;
   overflow: hidden;
   text-overflow: ellipsis;

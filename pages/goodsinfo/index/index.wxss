@@ -7,9 +7,15 @@
 .all {
   margin-left: 30rpx;
   margin-right: 30rpx;
+  margin-top: 30rpx;
 }
-
+.bar-goods{
+  width: 50%;
+  padding-left: 40rpx
+}
 .barcss {
+  display: flex;
+  flex-direction: row;
   background-color: white;
   width: 100%;
   font-size: 30rpx;
@@ -21,12 +27,14 @@
 }
 
 .barone {
+  width: 50%;
   padding-left: 95rpx;
   padding-right: 95rpx;
   color: #d4d4d4;
 }
 
 .red {
+  width: 50%;
   color: #ff6347;
   padding-left: 95rpx;
   padding-right: 95rpx;

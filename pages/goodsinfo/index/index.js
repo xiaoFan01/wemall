@@ -1,23 +1,27 @@
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    images: [{
-        url: '../static/image/iPad0.jpg'
-      },
-      {
-        url: '../static/image/iPad1.jpeg'
-      },
-      {
-        url: '../static/image/iPad2.jpeg'
-      },
-      {
-        url: '../static/image/iPad3.jpeg'
-      }
+    webPath: 'http://www.tangcool.store',
+    goods:{},
+    images:{}, 
+    // [{
+    //     url: '../static/image/iPad0.jpg'
+    //   },
+    //   {
+    //     url: '../static/image/iPad1.jpeg'
+    //   },
+    //   {
+    //     url: '../static/image/iPad2.jpeg'
+    //   },
+    //   {
+    //     url: '../static/image/iPad3.jpeg'
+    //   }
 
-    ],
+    // ],
     color: [{
         color: '金色',
         id: 0
@@ -115,7 +119,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    console.log(options.id)
+    var that = this;
+    wx.request({
+      url: app.globalData.URL + '/goods/id',
+      data: {
+        id: options.id,
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data)
+         that.setData({
+           goods: res.data,
+           images: res.data.zuTu
+         })
+      }
+    })
   },
 
   /**
@@ -166,6 +186,23 @@ Page({
   onShareAppMessage: function() {
 
   },
-  
-
+  addToCart(){
+    var that = this;
+    wx.request({
+      url: app.globalData.URL + '/addToCart',
+      data: {
+        user_id:32780,
+        goods_id:this.data.goods.id,
+        spec_info:null
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        wx.showToast({
+          title: '添加成功',
+        })
+      }
+    })
+  }
 })

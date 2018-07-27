@@ -1,8 +1,12 @@
 <!-- 固定导航栏 -->
 <view class='barcss'>
-  <text class='barone' bindtap='jumptogoods'>商品</text>
-  <text class='red'>评价</text>
-  <text class='barone' bindtap='jumptomore'>详情</text>
+  <view class='bar01'>
+    <text class='barone' bindtap='jumptogoods'>商品</text>
+  </view>
+  <view class='bar01'>
+    <text class='red'>评价</text>
+  </view>
+  <!-- <text class='barone' bindtap='jumptomore'>详情</text> -->
 </view>
 <view class='all'>
   <view class='wideline1'></view>
@@ -10,26 +14,25 @@
   <!-- 评价统计 -->
   <view class='commit'>
     <text>评价 </text>
-    <text class='smallred'>好评 98%</text>
-    <text class='totle'>共1.7万+条评价</text>
+    <!-- <text class='smallred'>好评 98%</text> -->
+    <text class='totle'>共{{}}条评价</text>
   </view>
 
-  <view class='line'></view>
+  <!-- <view class='line'></view>
   <view>
     <text class='downtotle'>好评（7.1万）</text>
     <text class='downtotle'>中评（300+）</text>
     <text class='downtotle'>差评（600+）</text>
     <text class='downtotle'>晒单（1.9万）</text>
-  </view>
+  </view> -->
 
   <view class='wideline1'></view>
   <!-- 评价 -->
   <view>
-    <text class='username'>j***c </text>
-    <text class='xing'>*****</text>
-    <text class='date'>2017-11-13</text>
+    <text class='username'>j**{{}} </text>
+    <text class='date'>2017-11-13{{}}</text>
   </view>
-  <view class='font'>一直想买iPad，放在购物车很久了，然后趁着双十一便宜了赶紧入手了，最外面的包装忘记拍照片了，包装的很严实，不会磕到碰到，开机以后显示电量有百分之八十。
+  <view class='font'>一直想买iPad，放在购物车很久了，然后趁着双十一便宜了赶紧入手了，最外面的包装忘记拍照片了，包装的很严实，不会磕到碰到，开机以后显示电量有百分之八十。{{}}
   </view>
   <!-- 分割线 -->
   <view class='line'></view>

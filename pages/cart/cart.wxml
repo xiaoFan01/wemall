@@ -2,21 +2,22 @@
   <scroll-view class="scroll" scroll-y="true">
     <view class="separate"></view>
     <view wx:for="{{carts}}" wx:key="*this">
-      <view wx:if="{{item.id}}">
+      <view wx:if="{{item}}">
+
         <view class="cart_container">
-          <view wx:if="{{!item.isSelect}}">
+          <!-- <view wx:if="{{!item.isSelect}}">
             <icon class="item-select" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" type="circle" size="20"></icon>
           </view>
           <view wx:elif="{{item.isSelect}}">
-            <icon class="item-select" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" type="success" color="#f0145a" size="20"></icon>
-          </view>
+            <icon class="item-select" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}" type="success" color="#f0145a" size="20"></icon> -->
+          <!-- </view> -->
 
-          <image class="item-image" src="{{item.pic}}"></image>
+          <image class="item-image" src='{{webPath+"/"+item.zuTu.path+"/"+item.zuTu.name}}'></image>
           <import src="../template/template.wxml" />
           <view class="column">
-            <text class="title">{{item.name}}</text>
+            <text class="title">{{item.goods_name}}</text>
             <view class="row">
-              <text class="sku-price">￥{{item.price * item.count}}</text>
+              <text class="sku-price">￥{{item.goods_price * item.number}}</text>
               <view class='del'>
                 <image data-index="{{index}}" class='del-size' src='/static/img/del.png' bindtap='del'></image>
               </view>
@@ -28,7 +29,7 @@
           </view>
         </view>
       </view>
-
+      
       <view class="separate"></view>
     </view>
   </scroll-view>
@@ -38,14 +39,14 @@
 
   <view class="row">
 
-    <view wx:if="{{!isAllSelect}}">
+    <!-- <view wx:if="{{!isAllSelect}}">
       <icon class="item-allselect" bindtap="allSelect" type="circle" size="20"></icon>
     </view>
     <view wx:elif="{{isAllSelect}}">
       <icon class="item-allselect" bindtap="allSelect" type="success" color="#f0145a" size="20"></icon>
-    </view>
-    <text class="small_text">全选</text>
-    <text>合计:￥ </text>
+    </view> -->
+    <!-- <text class="small_text">全选</text> -->
+    <text class='text-t'>合计:￥ </text>
     <text class="price">{{totalMoney}}</text>
     <button class="button-red" bindtap="toBuy" formType="submit">去结算 </button>
   </view>

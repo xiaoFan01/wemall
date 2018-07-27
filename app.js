@@ -1,7 +1,9 @@
 App({
 
   globalData: {
-    userInfo: null
+    userInfo: null,
+    URL: "http://localhost:8080",  //"http://39.107.108.40:8080",
+    webPath:"http://www.tangcool.store"
   },
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）

@@ -10,6 +10,7 @@
     "pages/userinfo/addaddress/addaddress",
     "pages/order/order",
     "pages/order-confirm/order-confirm",
+    "pages/choose-addr/choose-addr",
     "pages/goodsearch/goodsearch" 
   ],
   "window": {

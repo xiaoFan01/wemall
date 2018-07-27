@@ -1,33 +1,43 @@
 <view class='bgc'>
-  <view wx:if="{{addr.addr}}">
-    <view class='addr'>
+  <view wx:if="{{!addr.id}}">
+    <view class='addr' bindtap='chooseaddr'>
       <view class='addr-icon'>
         <image class='icon-size' src='/static/img/address.png'></image>
       </view>
       <view class='addr-msg'>
-        <view>{{addr.addr}}</view>
-        <view>{{addr.name}}</view>
-        <view>{{addr.phone}}</view>
+        <view>{{addr[0].area_info}}</view>
+        <view>{{addr[0].trueName}}</view>
+        <view>{{addr[0].mobile}}</view>
       </view>
       <view class='addr-icon'>
         <image class='icon-size' src='/static/img/icon-more.png'></image>
       </view>
     </view>
   </view>
-  <view wx:elif="{{!addr.addr}}" class='addr'>
-    <view class='addr-no'>
-      请选择地址
+  <view wx:elif="{{addr.id}}">
+    <view class='addr' bindtap='chooseaddr'>
+      <view class='addr-icon'>
+        <image class='icon-size' src='/static/img/address.png'></image>
+      </view>
+      <view class='addr-msg'>
+        <view>{{addr.area_info}}</view>
+        <view>{{addr.trueName}}</view>
+        <view>{{addr.mobile}}</view>
+      </view>
+      <view class='addr-icon'>
+        <image class='icon-size' src='/static/img/icon-more.png'></image>
+      </view>
     </view>
   </view>
   <view wx:for="{{carts}}" wx:key="*this">
     <view class='order'>
     <view class='goods'>
-      <view class='photo'><image class='photo-size' src='{{item.pic}}'></image></view>
-      <view class='goods-name'>{{item.name}}</view>
-      <view class='price-count'>￥{{item.price}}    x{{item.count}}</view>
+      <view class='photo'><image class='photo-size' src='{{webPath+"/"+item.zuTu.path+"/"+item.zuTu.name}}'></image></view>
+      <view class='goods-name'>{{item.goods_name}}</view>
+      <view class='price-count'>￥{{item.goods_price}}    x{{item.number}}</view>
     </view>
     <view class='send'>运费<view class='send-price'>￥0</view></view>
-    <view class='subtotal'>小计（含运费）：<view style='color:red'>￥{{item.price*item.count}}</view></view>
+    <view class='subtotal'>小计（含运费）：<view style='color:red'>￥{{item.goods_price*item.number}}</view></view>
   </view>
   </view>
 </view>

@@ -8,7 +8,7 @@ Page({
     h1:false,
     h2:false,
     h3:false,
-    hidden:false,
+    hidden:true,
     goods:[
       {
         id:5,

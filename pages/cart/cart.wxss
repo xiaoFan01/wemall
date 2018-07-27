@@ -46,6 +46,9 @@ page{
   white-space: nowrap;
   text-overflow: ellipsis
 }
+.text-t{
+  padding-left: 20rpx
+}
  .del{
   padding-top: 30rpx;
   padding-left: 45rpx;

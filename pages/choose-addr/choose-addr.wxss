@@ -42,7 +42,7 @@
 }
 .font{
   width: 70%;
-  padding-left: 0rpx
+  padding-left: 20rpx
 }
 .btn{
   height: 90%;

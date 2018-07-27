@@ -1,9 +1,11 @@
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    webPath:"http://www.tangcool.store",
     flag1: false,
     flag2: true,
     flag3: false,
@@ -12,31 +14,48 @@ Page({
     isAllSelect: false,
     totalMoney: 0,
     //商品详情介绍
-    carts: [
-      {
-        id: 1,
-        pic: "/static/img/iPad.jpg",
-        name: "APPLE苹果iPad2018款平板电脑air2更新版9APPLE苹果iPad2018新款平板电脑",
-        price: 2088,
-        isSelect: false,
-        // 数据设定
-        count: 1
-      },
-      {
-        id: 2,
-        pic: "/static/img/02.jpg",
-        name: "惠科（HKC）C340 34英寸",
-        price: 2299,
-        isSelect: false,
-        // 数据设定
-        count: 1
-      }]
+    carts:{} 
+    // [
+    //   {
+    //     id: 1,
+    //     pic: "/static/img/iPad.jpg",
+    //     name: "APPLE苹果iPad2018款平板电脑air2更新版9APPLE苹果iPad2018新款平板电脑",
+    //     price: 2088,
+    //     isSelect: false,
+    //     // 数据设定
+    //     count: 1
+    //   },
+    //   {
+    //     id: 2,
+    //     pic: "/static/img/02.jpg",
+    //     name: "惠科（HKC）C340 34英寸",
+    //     price: 2299,
+    //     isSelect: false,
+    //     // 数据设定
+    //     count: 1
+    //   }]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+    wx.request({
+      url: app.globalData.URL + '/cart',
+      data: {
+        user_id:32780,
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data)
+         that.setData({
+           carts: res.data
+         })
+      }
+    })
     
   },
 
@@ -44,7 +63,15 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+    let i = 0;
+    this.data.totalMoney = 0;
+    for (i = 0; i < this.data.carts.length; i++) {
+      this.data.totalMoney = this.data.totalMoney + (this.data.carts[i].goods_price * this.data.carts[i].number);
+    }
+    this.setData({
+      carts: this.data.carts,
+      totalMoney: this.data.totalMoney
+    })
   },
 
   /**
@@ -154,7 +181,7 @@ Page({
       this.data.totalMoney = 0;
       for (i = 0; i < this.data.carts.length; i++) {
         this.data.carts[i].isSelect = true;
-        this.data.totalMoney = this.data.totalMoney + (this.data.carts[i].price * this.data.carts[i].count);
+        this.data.totalMoney = this.data.totalMoney + (this.data.carts[i].goods_price * this.data.carts[i].number);
 
       }
     }
@@ -172,38 +199,39 @@ Page({
   },
   // 去结算
   toBuy() {
-    var a=0;
-    for(var i=0;i<this.data.carts.length;i++){
-      if(this.data.carts[i].isSelect==true){
-        a++;
-      }
-    }
-    if(a==0){
-      wx.showToast({
-        title: '请选择',
-        icon: 'none',
-        duration: 3000
-      });
-    }
-    else{
-      // wx.showToast({
-      //   title: '去结算',
-      //   icon: 'success',
-      //   duration: 3000
-      // });
+    // var a=0;
+    // for(var i=0;i<this.data.carts.length;i++){
+    //   if(this.data.carts[i].isSelect==true){
+    //     a++;
+    //   }
+    // }
+    // if(a==0){
+    //   wx.showToast({
+    //     title: '请选择',
+    //     icon: 'none',
+    //     duration: 3000
+    //   });
+    // }
+    // else{
+    //   // wx.showToast({
+    //   //   title: '去结算',
+    //   //   icon: 'success',
+    //   //   duration: 3000
+    //   // });
       wx.navigateTo({
         url: '/pages/order-confirm/order-confirm'
       })
-    }
-    this.setData({
-      showDialog: !this.data.showDialog
-    });
+    app.globalData.totalMoney = this.data.totalMoney;
+    // }
+    // this.setData({
+    //   showDialog: !this.data.showDialog
+    // });
   },
   //数量变化处理
   handleQuantityChange(e) {
     var componentId = e.componentId;
     var quantity = e.quantity;
-    this.data.carts[componentId].count.quantity = quantity;
+    this.data.carts[componentId].number.quantity = quantity;
     this.setData({
       carts: this.data.carts,
     });
@@ -212,10 +240,10 @@ Page({
   delCount: function (e) {
     var index = e.target.dataset.index;
     console.log("刚刚您点击了加一");
-    var count = this.data.carts[index].count;
+    var count = this.data.carts[index].number;
     // 商品总数量-1
     if (count > 1) {
-      this.data.carts[index].count--;
+      this.data.carts[index].number--;
     }
     // 将数值与状态写回  
     this.setData({
@@ -228,10 +256,10 @@ Page({
   addCount: function (e) {
     var index = e.target.dataset.index;
     console.log("刚刚您点击了加+");
-    var count = this.data.carts[index].count;
+    var count = this.data.carts[index].number;
     // 商品总数量+1  
     if (count < 10) {
-      this.data.carts[index].count++;
+      this.data.carts[index].number++;
     }
     // 将数值与状态写回  
     this.setData({
@@ -243,10 +271,7 @@ Page({
   priceCount: function (e) {
     this.data.totalMoney = 0;
     for (var i = 0; i < this.data.carts.length; i++) {
-      if (this.data.carts[i].isSelect == true) {
-        this.data.totalMoney = this.data.totalMoney + (this.data.carts[i].price * this.data.carts[i].count);
-      }
-
+      this.data.totalMoney = this.data.totalMoney + (this.data.carts[i].goods_price * this.data.carts[i].number);
     }
     this.setData({
       totalMoney: this.data.totalMoney,
@@ -256,10 +281,25 @@ Page({
     var index = parseInt(e.target.dataset.index);
     let carts = this.data.carts;
     var a = 0;
-    carts[index]=null;
     console.log(index);
+    this.data.totalMoney = this.data.totalMoney - carts[index].goods_price * carts[index].number;
+    wx.request({
+      url: app.globalData.URL+"/cart/deleteGoods",
+      data:{
+        userId: 32780,
+        goodsId:this.data.carts[index].goods_id
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res){
+        console.log(res.data)
+      }
+    })
+    carts[index] = null;
     this.setData({
-      carts
+      carts,
+      totalMoney: this.data.totalMoney
     })
     console.log(carts)
     for (var i = 0; i < this.data.carts.length;i++){
