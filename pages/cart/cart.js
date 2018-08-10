@@ -289,6 +289,7 @@ Page({
         userId: 32780,
         goodsId:this.data.carts[index].goods_id
       },
+      method:'POST',
       header: {
         'content-type': 'application/json' // 默认值
       },

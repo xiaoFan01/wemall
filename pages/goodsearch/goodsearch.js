@@ -1,22 +1,25 @@
 // pages/dharma.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    webPath: 'http://www.tangcool.store',
     h1:false,
     h2:false,
     h3:false,
     hidden:true,
-    goods:[
-      {
-        id:5,
-        name:"APPLE苹果iPad2018新款平板电脑air2更新版9APPLE苹果iPad2018新款平板电脑air2更新版9APPLE苹果iPad2018新款平板电脑",
-        price:2599,
-        img:"/static/img/iPad.jpg"
-      }
-    ]
+    goods:{},
+    // [
+    //   {
+    //     id:5,
+    //     name:"APPLE苹果iPad2018新款平板电脑air2更新版9APPLE苹果iPad2018新款平板电脑air2更新版9APPLE苹果iPad2018新款平板电脑",
+    //     price:2599,
+    //     img:"/static/img/iPad.jpg"
+    //   }
+    // ]
   },
 
   /**
@@ -74,10 +77,32 @@ Page({
   onShareAppMessage: function () {
 
   },
-  
-  onsearch(){
-    wx.navigateTo({
-      url: '../goodsearch/goodsearch'
+  word(e){
+    this.data.word = e.detail.value;
+  },
+  onsearch(e){
+    console.log(this.data.word);
+    var that = this;
+    wx.request({
+      url: app.globalData.URL + '/goods/like',
+      data: {
+        goods_store_id: 32769,
+        word:that.data.word,
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data)
+        if(res.data){
+          that.setData({
+            hidden: false,
+          })
+        }
+        that.setData({
+          goods: res.data
+        })
+      }
     })
   },
   
@@ -112,6 +137,11 @@ Page({
       h2: false,
       h3: true
     })
+  },
+  togoodsinfo: function (e) {
+    var index = parseInt(e.currentTarget.dataset.index);
+    wx.navigateTo({
+      url: '/pages/goodsinfo/index/index?id=' + this.data.goods[index].id
+    })
   }
-  
 })

@@ -3,7 +3,7 @@
   <view class='search'>
 
     <view class='search-input'>
-      <input class='search-input-in'></input>
+      <input class='search-input-in' bindinput="word"></input>
     </view>
 
     <view class='search-btn' bindtap='onsearch'>搜索</view>
@@ -26,11 +26,11 @@
   <view scroll-y='true' class='advertisement'>
     <view wx:for="{{goods}}" wx:key="*this" data-index="{{index}}" class='good-out' bindtap='togoodsinfo'>
       <view>
-        <image src='{{item.img}}' class='img'></image>
+        <image src='{{webPath+"/"+item.zuTu.path+"/"+item.zuTu.name}}' class='img'></image>
       </view>
       <view class='goodinfo-border'>
-        <text class='goodinfo'>{{item.name}}</text>
-        <view class='goods-price'>¥ {{item.price}}</view>
+        <text class='goodinfo'>{{item.goods_name}}</text>
+        <view class='goods-price'>¥ {{item.goods_price}}</view>
       </view>
     </view>
   </view>

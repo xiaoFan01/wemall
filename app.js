@@ -2,7 +2,9 @@ App({
 
   globalData: {
     userInfo: null,
-    URL: "http://localhost:8080",  //"http://39.107.108.40:8080",
+    URL: "http://guzhuangzhuang.cn:8080",
+    //"http://localhost:8080",  
+    //"http://39.107.108.40:8080",
     webPath:"http://www.tangcool.store"
   },
   /**
