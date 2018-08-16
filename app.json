@@ -11,7 +11,10 @@
     "pages/order/order",
     "pages/order-confirm/order-confirm",
     "pages/choose-addr/choose-addr",
-    "pages/goodsearch/goodsearch" 
+    "pages/goodsearch/goodsearch",
+    "pages/admin/admin-1",
+    "pages/order-msg/order-msg",
+    "pages/order-1/order-1"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",

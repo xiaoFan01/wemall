@@ -1,0 +1,100 @@
+.bgc{
+  background: whitesmoke;
+  height: auto
+}
+.addr{
+  display: flex;
+  flex-direction: row;
+  height: 120rpx;
+  width: 100%;
+  background: pink
+}
+.addr-icon{
+  height: 100%;
+  width: 10%
+}
+.icon-size{
+  padding-top: 30rpx;
+  padding-left: 20rpx;
+  height: 50rpx;
+  width: 45rpx
+}
+.addr-msg{
+  padding-top: 18rpx;
+  padding-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+  font-size: x-small
+}
+.order{
+  font-size: small;
+  margin-top: 30rpx;
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+  /* height: 330rpx; */
+  background: white;
+}
+.goods{
+  display: flex;
+  flex-direction: row;
+  padding-top: 15rpx;
+  height: 200rpx;
+  width: 100%;
+  border-bottom: 1rpx whitesmoke solid;
+}
+.photo{
+  height: 100%;
+  width: 30%
+}
+.photo-size{
+  height: 90%;
+  width: 90%
+}
+.goods-name{
+  width: 50%;
+  height: 35px;
+  padding-top: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.price-count{
+  padding-left: 10rpx;
+  padding-top: 40rpx;
+  width: 20%
+}
+.send{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10rpx;
+  border-bottom: 1rpx whitesmoke solid;
+}
+.subtotal{
+  padding-top: 10rpx;
+  padding-left: 40%;
+  display: flex;
+  flex-direction: row
+}
+.send-price{
+  padding-left: 70%
+}
+.order-total{
+  background: white;
+  padding-left: 20rpx;
+  margin-top: 1rpx;
+}
+.order-id{
+  margin-top: 20rpx;
+  padding-left: 20rpx;
+  background: white;
+  font-size: small;
+  /* height: 130rpx; */
+}
+.or-id{
+  padding-top: 20rpx;
+  font-size: small;
+}

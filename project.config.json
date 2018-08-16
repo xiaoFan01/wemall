@@ -8,5 +8,73 @@
 	},
 	"appid": "wx76922aad15746294",
 	"projectname": "mall",
-	"condition": {}
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 7,
+			"list": [
+				{
+					"id": -1,
+					"name": "购物车",
+					"pathName": "pages/cart/cart",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "搜索商品",
+					"pathName": "pages/goodsearch/goodsearch",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "商城首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "确认订单",
+					"pathName": "pages/order-confirm/order-confirm",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单",
+					"pathName": "pages/order/order",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "商城管理",
+					"pathName": "pages/admin/admin-1",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "后台订单",
+					"pathName": "pages/order-1/order-1",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "后台订单详情",
+					"pathName": "pages/order-msg/order-msg"
+				}
+			]
+		}
+	}
 }

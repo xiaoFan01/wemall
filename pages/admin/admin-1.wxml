@@ -1,0 +1,12 @@
+<view class='bg' style='height:{{height}}px'>
+  <view class='null'></view>
+  <view class='div-1'>
+    <view class='photo'><image src='{{userInfo.avatarUrl}}' class='photo-size'></image></view>
+    <view class='name'>{{userInfo.nickName}}</view>
+  </view>
+  <view class='item'>
+    <view class='item-1' bindtap=''><image src='/static/img/goods.png' class='icon-size'></image><view>商品</view></view>
+    <view class='item-2' bindtap='to_order'><image src='/static/img/order-1.png' class='icon-size'></image><view>订单</view></view>
+    <view class='item-3'><image src='/static/img/money.png' class='icon-size'></image><view>收益</view></view>
+  </view>
+</view>

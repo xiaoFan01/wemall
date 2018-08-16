@@ -1,0 +1,39 @@
+<view class='bg'>
+  <view class='top'>
+    <view class='item' bindtap='select1'>
+      <text style='color:{{color1}}'>全部</text>
+    </view>
+    <view class='item' bindtap='select2'>
+      <text style='color:{{color2}}'>待付款</text>
+    </view>
+    <view class='item' bindtap='select3'>
+      <text style='color:{{color3}}'>进行中</text>
+    </view>
+    <view class='item' bindtap='select4'>
+      <text style='color:{{color4}}'>已完成</text>
+    </view>
+  </view>
+  <view class='order-all'>
+    <view wx:if="{{order.length == 0}}" class='no-order'>暂无相关订单</view>
+    <view wx:for="{{order}}" wx:key="*this" class='order-item'>
+      <view class='order'>
+        <view class='order-title'>
+          <view class='order-title-name'>饭饭的小店</view>
+          <view>{{item.status}}</view>
+        </view>
+        <view class='goods' data-index="{{index}}" bindtap='order_msg'>
+          <view class='photo' wx:for="{{item.goodsMyValuables}}" wx:for-item="goodsMyValuables" wx:key="goodsMyValuables">
+            <image class='photo-size' src='{{webPath+"/"+goodsMyValuables.zuTu.path+"/"+goodsMyValuables.zuTu.name}}'></image>
+          </view>
+          <view wx:if="{{item.goodsMyValuables.length == 1}}" class='goods-name'>{{item.goodsMyValuables[0].goods_name}}</view>
+        </view>
+        <view class='send'>运费
+          <view class='send-price'>￥0</view>
+        </view>
+        <view class='subtotal'>小计（含运费）：
+          <view style='color:red'>￥{{item.totalPrice}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

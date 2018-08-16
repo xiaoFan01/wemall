@@ -50,6 +50,12 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
+        if(res.data.length == 0){
+          that.setData({
+            hidden: true,
+            hiddenEmpty: false
+          })
+        }
         console.log(res.data)
          that.setData({
            carts: res.data
@@ -289,7 +295,6 @@ Page({
         userId: 32780,
         goodsId:this.data.carts[index].goods_id
       },
-      method:'POST',
       header: {
         'content-type': 'application/json' // 默认值
       },

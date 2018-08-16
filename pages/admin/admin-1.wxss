@@ -1,0 +1,67 @@
+.bg{
+  background-image: url('https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3383664073,3894710051&fm=27&gp=0.jpg');
+  /* height: 730px; */
+  background-size: 100% 100%;
+}
+.null{
+  height: 30rpx
+}
+.div-1{
+  /* background-color: pink; */
+  margin: 0rpx 50rpx;
+  height: 300rpx;
+  display: flex;
+  opacity: 9;
+  flex-direction: row
+}
+.photo{
+  width: 300rpx;
+  padding: 60rpx 60rpx
+}
+.name{
+  width: 100%;
+  padding-top: 110rpx;
+  padding-left: rpx;
+  font-size: x-large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.photo-size{
+  height: 180rpx;
+  width: 180rpx;
+  border-radius: 50%;
+}
+.item{
+  margin: 100rpx 50rpx 0rpx 50rpx;
+  height: 250rpx;
+  display: flex;
+  flex-direction: row
+}
+.item-1{
+  width: 33%;
+  text-align: center;
+  margin-right: 5rpx;
+  padding-top: 50rpx;
+  background: turquoise;
+  border-radius: 20%
+}
+.item-2{
+  width: 33%;
+  text-align: center;
+  margin-right: 5rpx;
+  margin-left: 5rpx;
+  padding-top: 50rpx;
+  background: yellow;
+  border-radius: 20%
+}
+.item-3{
+  width: 33%;
+  text-align: center;
+  margin-left: 5rpx;
+  padding-top: 50rpx;
+  background: salmon;
+  border-radius: 20%
+}
+.icon-size{
+  width: 80rpx;
+  height: 100rpx
+}

@@ -1,0 +1,39 @@
+<view class='bgc'>
+  <view class='addr'>
+    <view class='addr-icon'>
+      <image class='icon-size' src='/static/img/address.png'></image>
+    </view>
+    <view class='addr-msg'>
+      <view>{{order[0].user_address}}</view>
+      <view>{{order[0].userName}}</view>
+      <view>{{order[0].mobile || order[0].userTelephone}}</view>
+    </view>
+  </view>
+  <view>
+    <view wx:for="{{order[0].goodsMyValuables}}" wx:key="*this">
+      <view class='order'>
+        <view class='goods'>
+          <view class='photo'>
+            <image class='photo-size' src='{{webPath+"/"+item.zuTu.path+"/"+item.zuTu.name}}'></image>
+          </view>
+          <view class='goods-name'>{{item.goods_name}}</view>
+          <view class='price-count' style='color:red'>￥{{item.goods_price}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='order-total'>
+      <view class='send'>运费
+        <view class='send-price'>￥0</view>
+      </view>
+      <view class='subtotal'>小计(含运费)：
+        <view style='color:red'>￥{{order[0].totalPrice}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='order-id'>
+    <view class='or-id'>订单编号：{{order[0].order_id}}</view>
+    <view class='or-id'>下单时间：{{order[0].addTime}}</view>
+    <view wx:if="{{order[0].shipCode != null}}" class='or-id'>快递单号：{{order[0].shipCode}}</view>
+    <view wx:if="{{order[0].payTime != null}}" class='or-id'>支付时间：{{order[0].payTime}}</view>
+  </view>
+</view>
