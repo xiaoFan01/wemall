@@ -95,5 +95,10 @@ Page({
     wx.navigateTo({
       url: '/pages/order/order',
     })
+  },
+  tomystore(){
+    wx.navigateTo({
+      url: '/pages/admin/admin-1',
+    })
   }
 })

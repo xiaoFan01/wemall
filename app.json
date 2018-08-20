@@ -14,7 +14,8 @@
     "pages/goodsearch/goodsearch",
     "pages/admin/admin-1",
     "pages/order-msg/order-msg",
-    "pages/order-1/order-1"
+    "pages/order-1/order-1",
+    "pages/soldout/soldout"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",

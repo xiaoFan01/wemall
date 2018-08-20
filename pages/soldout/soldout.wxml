@@ -1,0 +1,10 @@
+<view class='bg'>
+  <view class='goods' wx:for="{{goods}}" wx:key="*this">
+    <view class='img'><image src='{{webPath+"/"+item.zuTu.path+"/"+item.zuTu.name}}' class='img-size'></image></view>
+    <view class='name'>{{item.goods_name}}</view>
+    <view class='btn' data-index="{{index}}" style='color:black' bindtap='sold_out'>下架</view>
+  </view>
+  <view class="add-goods">
+    <view class='publish'>发布商品</view>
+  </view>
+</view>

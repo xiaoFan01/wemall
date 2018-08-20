@@ -28,5 +28,14 @@
       <image src='/static/img/icon-more.png' class='imge-size'></image>
     </view>
   </view>
+  <view class='order' bindtap='tomystore'>
+    <view class='mycart'>
+      <image src='/static/img/my-store.png' class='imge-size'></image>
+      <text space='ensp'> 我的店铺</text>
+    </view>
+    <view class='order-more'>
+      <image src='/static/img/icon-more.png' class='imge-size'></image>
+    </view>
+  </view>
 </view>
 <include src='/static/wxml/footer.wxml' />

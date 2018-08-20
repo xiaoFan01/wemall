@@ -19,48 +19,7 @@ Page({
     autoplay: true,
     interval: 3000,
     duration: 500,
-    goods: {
-      //   id: 1,
-      //   name: "APPLE苹果iPad2018新款平板电脑air2更新版9.8英寸 金色WLAN版",
-      //   img: "/static/img/iPad.jpg",
-      //   price: 2088
-      // },
-      // {
-      //   id: 1,
-      //   name: "APPLE苹果iPad2018新款平板电脑air2更新版9.8英寸 金色WLAN版",
-      //   img: "/static/img/iPad.jpg",
-      //   price: 2088
-      // },
-      // {
-      //   id: 1,
-      //   name: "APPLE苹果iPad2018新款平板电脑air2更新版9.8英寸 金色WLAN版",
-      //   img: "/static/img/iPad.jpg",
-      //   price: 2088
-      // },
-      // {
-      //   id: 3,
-      //   name: "APPLE苹果iPad2018新款平板电脑air2更新版9.8英寸 金色WLAN版",
-      //   img: "/static/img/iPad.jpg",
-      //   price: 2988
-      // },
-      // {
-      //   id: 4,
-      //   name: "APPLE苹果iPad2018新款平板电脑air2更新版9.8英寸 金色WLAN版",
-      //   img: "/static/img/iPad.jpg",
-      //   price: 2998
-      // },
-      // {
-      //   id: 2,
-      //   name: "惠科（HKC）C340 34英寸100Hz刷新准4K高分21:9曲面电竞吃鸡游戏组装主机台",
-      //   img: "/static/img/02.jpg",
-      //   price: 2299
-      // },
-      // {
-      //   id: 9,
-      //   name: "惠科（HKC）C340 34英寸100Hz刷新准4K高分21:9曲面电竞吃鸡游戏组装主机台",
-      //   img: "/static/img/02.jpg",
-      //   price: 9999
-       }
+    goods: {}
     
   },
   /**

@@ -5,23 +5,29 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo: {},
-    height: "",
+    webPath: 'http://www.tangcool.store',
+    goods:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    try{
-      var res = wx.getSystemInfoSync()
-      console.log(res.windowHeight)
-    }catch(e){}
-    var info = wx.getStorageSync("userInfo")
-    console.log(info)
-    this.setData({
-      userInfo: info,
-      height: res.windowHeight
+    var that = this;
+    wx.request({
+      url: app.globalData.URL + '/goods',
+      data: {
+        goods_store_id: 32769,
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data)
+        that.setData({
+          goods: res.data
+        })
+      }
     })
   },
 
@@ -73,14 +79,21 @@ Page({
   onShareAppMessage: function () {
     
   },
-  to_order(){
-    wx.navigateTo({
-      url: '/pages/order-1/order-1',
-    })
-  },
-  to_goods(){
-    wx.navigateTo({
-      url: '/pages/soldout/soldout',
+  sold_out(e){
+    var that = this;
+    var index = parseInt(e.currentTarget.dataset.index);
+    console.log(that.data.goods[index].id)
+    wx.request({
+      url: app.globalData.URL + '/down',
+      data: {
+        id: that.data.goods[index].id,
+      },
+      success: function (res) {
+        console.log(res.data)
+        wx.showToast({
+          title: '已下架',
+        })
+      }
     })
   }
 })
